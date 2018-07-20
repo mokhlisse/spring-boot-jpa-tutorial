@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootjpaApplication {
 
-	// change to master
+	//new branch develop
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootjpaApplication.class, args);
 	}
