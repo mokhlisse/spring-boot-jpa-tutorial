@@ -53,17 +53,10 @@ public class MainController {
 	public ModelAndView save(@ModelAttribute Task task, BindingResult bindingResult,
 			Map<String, Object> model) {
 
-		Task newTask = new Task();
-		if (task.getId() != 0) {
-			newTask.setId(task.getId());
-		} else {
+		if (task.getId() == 0) {
 			task.setDateCreated(new Date());
 		}
-		newTask.setDescription(task.getDescription());
-		newTask.setName(task.getName());
-		newTask.setFinished(task.isFinished());
-
-		taskService.save(newTask);
+		taskService.save(task);
 
 		return new ModelAndView("redirect:/home", model);
 	}

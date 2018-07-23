@@ -21,7 +21,7 @@ public class Task {
 	private int id;
 	private String name;
 	private String description;
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Column(name = "date_created")
 	private Date dateCreated;
 	private boolean finished;
